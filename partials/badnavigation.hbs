@@ -1,0 +1,17 @@
+{{!-- <div class="fancy-nav">
+    {{#foreach navigation}}
+        <div class="nav-item-wrapper">
+            <a href="{{url absolute="true"}}">{{label}}</a>
+        </div>
+
+    {{/foreach}}
+</div> --}}
+
+<div class="fancy-nav">
+    {{#foreach navigation}}
+        <div class="nav-item-wrapper">
+            > <a href="{{url absolute="true"}}">{{label}}</a>
+        </div>
+
+    {{/foreach}}
+</div>

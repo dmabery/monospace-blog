@@ -1,0 +1,41 @@
+{{!< default}}
+    <div class="gh-page">
+        <div class="gh-container">
+            <div class="gh-page-head">
+                <h1>All Essays</h1>
+                <p>Filter by type:</p>
+                <div class="tag-wrapper">
+                       {{#get "tags" limit="all"}}{{tags separator = " | "}}{{/get}}
+                </div>
+             
+            </div>
+        
+        <div class="gh-postfeed">
+
+            
+            {{!-- Iterate through each posts --}}
+            {{#foreach posts}}
+
+            <div class="rounded-card">
+                <div class="card-body row align-items-center">
+                    <div class="col-8">
+                        <a class="text-light col-md-4" href="{{url}}">
+                            <h3><u>{{title}}</u></h3>
+                        </a>
+                        <div class="p-preview">
+                            <p>{{excerpt characters="170"}}</p>
+                        </div>
+                    </div>
+                        <div class="page-meta col-md-2 offset-md-2">
+                            {{date}}
+                            <br>
+                            {{tags}}
+
+                        </div>
+                    </div>
+            </div>
+
+             {{/foreach}}
+        </div>
+    </div>
+    </div>
