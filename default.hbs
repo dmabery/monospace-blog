@@ -36,6 +36,13 @@
         <div class="gh-head-menu">
             {{navigation}}
         </div>
+            <div class="gh-head-actions">
+            <div class="gh-head-actions-list">
+                {{#if @site.twitter}}
+                <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
+                {{/if}}
+            </div>
+        </div>
     </nav>
 </header>
 
@@ -54,17 +61,6 @@
         <div class="gh-foot-meta">
             Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
         </div>
-        <div class="gh-head-actions">
-            <div class="gh-head-actions-list">
-                {{#if @site.facebook}}
-                <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
-                {{/if}}
-                {{#if @site.twitter}}
-                <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
-                {{/if}}
-                <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
-            </div>
-        </div>
     </div>
 </footer>
 
@@ -80,6 +76,21 @@
 </script>
 <script src="{{asset "built/infinitescroll.js"}}"></script>
 {{/if}}
+
+// read more fades out
+<script>
+    $(window).scroll(function() {
+    var scrollTop = $(this).scrollTop();
+
+        $('.fade-out').css({
+        opacity: function() {
+            var elementHeight = $(this).height(),
+            opacity = ((elementHeight - scrollTop) / elementHeight);
+            return opacity;
+        }
+    });
+});
+</script>
 
 <script>
 $(document).ready(function () {

@@ -1,7 +1,7 @@
 {
-    "name": "ghost-starter-theme",
-    "description": "A custom theme for ghost",
-    "demo": "https://starter.ghost.io",
+    "name": "ghost-monospace",
+    "description": "A minimal tech blog theme for ghost",
+    "demo": "https://daltonmabery.com",
     "version": "3.0.9",
     "engines": {
         "ghost": ">=2.0.0",
@@ -21,9 +21,9 @@
         "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; fi"
     },
     "author": {
-        "name": "Ghost Foundation",
-        "email": "hello@ghost.org",
-        "url": "https://ghost.org"
+        "name": "Dalton Mabery",
+        "email": "maberydalton@gmail.com",
+        "url": "https://daltonmabery.com"
     },
     "gpm": {
         "type": "theme",

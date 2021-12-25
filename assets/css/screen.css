@@ -43,16 +43,15 @@ html,
 }
 
 .gh-page {
-    padding: 0 4vmin;
-      
+    padding: 0 4vmin;  
 }
 
 .gh-article {
-    padding: 8vmin 0;
+    padding: 0 0;
 }
 
 .gh-postfeed {
-    padding: 8vmin 0;
+    padding: 0 0;
 }
 
 .gh-container {
@@ -74,7 +73,6 @@ html,
 }
 
 .gh-head-actions a:first-child svg {
-    margin-left: 20px;
 }
 
 .gh-head-actions a:last-child svg {
@@ -85,9 +83,13 @@ p {
     font-family: var(--font-mono);
 }
 
+a {
+    color: var(--color-primary);
+}
+
 @media (max-width: 650px) {
     .gh-container {
-        max-width: 80%;
+        max-width: 100%;
     }
 }
 
@@ -98,7 +100,7 @@ p {
         border-left: 2px solid #666666;
         border-right: 2px solid #666666;
         border-top: 2px solid #666666;
-        border-bottom: 1px solid #666666;
+        border-bottom: 2px solid #666666;
         padding: 40px;
 }
 
@@ -190,7 +192,7 @@ p {
 /* ---------------------------------------------------------- */
 
 .gh-header {
-    padding: 0 0 8vmin 0;
+    padding: 0 0 3vmin 0;
     text-align: center;
 }
 
@@ -242,7 +244,7 @@ p {
 }
 
 .gh-content a {
-    color: #000;
+    color: #4b4b4b;
     background-color: #F2E39B;
     border: 2px solid #F2E39B;
     border-radius: 2px 2px 2px 2px;
@@ -250,7 +252,7 @@ p {
 }
 
 .gh-post-authors a {
-    color: #000;
+    color: #4b4b4b;
     background-color: #F2E39B;
     border: 2px solid #F2E39B;
     border-radius: 2px 2px 2px 2px;
@@ -258,7 +260,6 @@ p {
 }
 
 .tag-wrapper a {
-    margin-top: 10px;
     display: inline-block;
 }
 
@@ -329,6 +330,21 @@ p {
     border-right: 2px solid #666666;
     border-top: 2px solid #666666;
     border-bottom: 1px solid #666666;
-    min-width: 500px;
     padding: 40px;
+}
+
+@media (max-width: 700px) {
+    .col-8 {
+        width: 95%;
+    }
+}
+
+/* Home */
+
+.full-vh {
+    min-height: 85vh;
+}
+
+.fade-out {
+    opacity: 1;
 }
